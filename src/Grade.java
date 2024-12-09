@@ -1,30 +1,27 @@
 
-public class Grade extends Control {
+public class Grade {
 
-    private String courseName;
-    private String grade;
-    public Grade(String courseName, String grade) {
-        this.courseName = courseName;
-        this.grade = grade;
+
+    private int value;
+    private int id;
+
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
 
-    public int read(){
-        System.out.println(grade);
-        return 1;
+    public int getValue() {
+        return value;
     }
 
 
-    public void create(String grade){
-        this.grade = grade;
-
-    }
-
-    public String update(String ID, String grade){
-
-        this.grade = grade;
-        return grade;
+    public void setId(int id) {
+        this.id = id;
     }
 
 
+    public int getId() {
+        return id;
+    }
 }

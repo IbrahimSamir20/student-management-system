@@ -15,6 +15,7 @@ public class Instructor {
     public void setInstructorName(String instructorName){
         this.instructorName = instructorName;
     }
+
     public String getInstructorName(){
         return instructorName;
     }

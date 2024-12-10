@@ -1,21 +1,39 @@
-public class Control {
-    public void create (){
+import java.util.ArrayList;
 
+public class Control<objectType> {
+
+    private final ArrayList<objectType> dataList;
+    public Control(){
+        this.dataList = new ArrayList<>();
     }
 
-    public int read (){
-        int any ;
-        any = 0 ;
-        return any ;
+    //create method
+    public void create (objectType object){
+        this.dataList.add(object);
+    }
+    //read method
+    public ArrayList<objectType> read (){
+        return this.dataList;
     }
 
-    public void update (){
-        int target;
-        target = 0;
+    //update method
+    public void update (int id,objectType newObject){
+        if (id >= 0 && id < dataList.size()){
+           dataList.set(id,newObject);
+        }else {
+            System.out.print("this is user note found check your information");
+        }
     }
 
-    public void delete (){
 
+    // delete method
+    public void delete(int id){
+        if(id >= 0 && id < dataList.size()){
+            dataList.remove(id);
+        }else {
+            System.out.print("data note found please check your information");
+        }
     }
+
 
 }
